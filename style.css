@@ -10,6 +10,7 @@ body {
     background-color: #e2e2e2;
 
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #sticky-navbar-wrapper {
@@ -164,11 +165,11 @@ body {
     align-self: center;
     margin-left: auto;
     margin-right: auto;
+    font-family: 'Hind Madurai', sans-serif;
 }
 
 #install-instructions h1 {
     font-size: 2.5em;
-    font-family: 'Hind Madurai', sans-serif;
     letter-spacing: 0.1em;
 }
 
