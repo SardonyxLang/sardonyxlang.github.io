@@ -1,4 +1,2 @@
-window.addEventListener('hashchange', function() {
-    
-})
+
 

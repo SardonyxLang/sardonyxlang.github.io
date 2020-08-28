@@ -132,26 +132,46 @@ body {
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 3;
+
+    white-space: nowraw;
 }
 
 
 .code-block-plain {
     background-color: #000000;
     color: white;
-    padding: 9px;
+    padding: 0.3em;
     border-radius: 10px;
     font-family: 'Nanum Gothic Coding', monospace;
     letter-spacing: 0.05em;
     white-space: pre-wrap;
     box-shadow: 0px 2px 7px #252525;
+    display: inline-block;
 }
 
-#anchors-box div {
+#anchors-box .anchor {
     height: 93vh;
     padding-top: 7vh;
     margin-top: -7vh;
+    display: flex;
 }
 
-#anchors-box div:nth-child(odd) {
+#anchors-box div.anchor:nth-child(odd) {
     background-color: #d3d3d3;
+}
+
+#install-instructions {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#install-instructions h1 {
+    font-size: 2.5em;
+    font-family: 'Hind Madurai', sans-serif;
+    letter-spacing: 0.1em;
+}
+
+#install-instructions li {
+    margin: 1.5em;
 }
