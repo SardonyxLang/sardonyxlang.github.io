@@ -250,3 +250,23 @@ main > nav > a {
 main > nav > a:hover {
     text-decoration: none;
 }
+
+@media (max-width: 700px) {
+    main {
+        flex-direction: column;
+    }
+
+    main > nav > a {
+        margin-right: 20px;
+    }
+
+    main > nav {
+        min-height: 10vh;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    main > div {
+        padding: 0 20px;
+    }
+}
