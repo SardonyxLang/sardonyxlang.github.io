@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta viewport="width=device-width">
+    <meta name="description" content="The Official Documentation for The Sardonyx Programming Language">
+    <meta name="keywords" content="Sardonyx, Language, Programming, Documentation, Docs">
+    <meta name="og:image" content="/src/images/sdx-logo.png">
+    <link href="/style.css" rel="stylesheet" type="text/css">
+
+    <link rel="icon"
+          type="image/ico"
+          href="/src/images/sdx-favicon.ico">
+    <title>Operators and Overloading - The Sardonyx Programming Language</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+    <link href="/md.css" rel="stylesheet" type="text/css">
+    <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="sticky-navbar-wrapper">
+    <div id="top-navbar">
+        <a href="/#" id="home-link">
+            <img src="/src/images/sdx-logo.png">
+            <span>Sardonyx</span>
+        </a>
+        <a class="link" href="/#about">About</a>
+        <a class="link" href="#install">Install</a>
+        <a class="link" href="/docs">Docs</a>
+        <a class="link" href="https://github.com/SardonyxLang">Github</a>
+    </div>
+    </div>
+    <main>
+        <nav>
+        <a href="/docs/blocks">Blocks</a>
+        <a href="/docs/comments">Comments</a>
+        <a href="/docs/flow">Control Flow</a>
+        <a href="/docs/types">Data Types</a>
+        <a href="/docs/functions">Functions</a>
+        <a href="/docs/ruby">Interfacing with Ruby</a>
+        <a href="/docs/objects">Objects</a>
+        <a href="/docs/operators">Operators</a>
+        <a href="/docs/require">Requring Files</a>
+        <a href="/docs/variables">Variables</a>
+    </nav>
+    <div>
+    <h1><a href="/docs">Docs</a> > Operators and Overloading</h1>
+    <div id="md">
+Several operators are provided: `+`, `-`, `*`, and `/` function as normal. `%` and `^` represent modulus and exponentiation, respectively. `<`, `>`, `<=`, `>=`, `==`, and `!=` behave as normal.
+Objects can overload these operators using several functions:
+
+- `__add` for `+`,
+- `__sub` for `-`,
+- `__mul` for `*`,
+- `__div` for `/`,
+- `__mod` for `%`,
+- `__pow` for `^`,
+- `__lt` for `<`,
+- `__gt` for `>`,
+- `__le` for `<=`,
+- `__ge` for `>=`,
+- `__eq` for `==`,
+- and finally, `__neq` for `!=`.
+For example, to create an object `A` which can be added to, we might do:
+```
+object A(n) {
+    fn __add(other) {
+        n + other
+    }
+}
+```
+Then we can do something like the following:
+```
+obj = new A(5)
+obj + 6
+```
+This should evaluate to `11`.
+
+## Overloading Str and Bool Representation
+
+One thing you may have noticed is that when printed on the REPL, objects use the native Ruby format, ie. `<Object#...>`. To get around this, we can overloading `__as_str`:
+```
+object A(n) {
+    # SNIP
+    fn __as_str() {
+        n.__as_str()
+    }
+}
+```
+`__as_str()` should take no arguments and return a str.
+
+As well, you may have noticed that all objects are truthy. You can get around this using `__as_bool`:
+```
+object A(n) {
+    # SNIP
+    fn __as_bool() {
+        false
+    }
+}
+```
+This would make all instances of `A` evaluate to falsy, rather than truthy. Like `__as_str`, `__as_bool` should take no arguments and return a boolean. 
+
+## Calling
+
+It is quite simple to make an object callable. You have to define two properties: `__arity`, the number of arguments the object should take, and `__call`, a function taking that many arguments. For example:
+```
+object A(n) {
+    # SNIP
+    __arity = 2
+    fn __call(a, b) {
+        ...
+    }
+}
+```
+    </div>
+    </div>
+    </main>
+    <script src="/docs/md.js"></script>
+</body>
+</html>

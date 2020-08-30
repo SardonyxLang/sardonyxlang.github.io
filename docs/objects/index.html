@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Documentation - The Sardonyx Programming Language</title>
-
     <meta charset="utf-8">
     <meta viewport="width=device-width">
     <meta name="description" content="The Official Documentation for The Sardonyx Programming Language">
     <meta name="keywords" content="Sardonyx, Language, Programming, Documentation, Docs">
-    <meta name="og:image" content="../src/images/sdx-logo.png">
-    <link href="/md.css" rel="stylesheet" type="text/css">
+    <meta name="og:image" content="/src/images/sdx-logo.png">
     <link href="/style.css" rel="stylesheet" type="text/css">
 
     <link rel="icon"
           type="image/ico"
-          href="../src/images/sdx-favicon.ico">
+          href="/src/images/sdx-favicon.ico">
+    <title>Objects - The Sardonyx Programming Language</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+    <link href="/md.css" rel="stylesheet" type="text/css">
+    <link href="/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div id="sticky-navbar-wrapper">
@@ -29,12 +30,12 @@
     </div>
     </div>
     <main>
-    <nav>
+        <nav>
         <a href="/docs/blocks">Blocks</a>
         <a href="/docs/comments">Comments</a>
         <a href="/docs/flow">Control Flow</a>
         <a href="/docs/types">Data Types</a>
-        <a href="/docs/function">Functions</a>
+        <a href="/docs/functions">Functions</a>
         <a href="/docs/ruby">Interfacing with Ruby</a>
         <a href="/docs/objects">Objects</a>
         <a href="/docs/operators">Operators</a>
@@ -42,11 +43,34 @@
         <a href="/docs/variables">Variables</a>
     </nav>
     <div>
-    <h1>Docs</h1>
-    <p>
-        This page contains documentation for the Sardonyx programming language. It is copied from the <a href="https://github.com/SardonyxLang/Sardonyx/wiki">Github Wiki</a>.
-    </p>
+    <h1><a href="/docs">Docs</a> > Objects</h1>
+    <div id="md">
+Objects are the Sardonyx version of modules and namespaces. They are declared using the `object` keyword.
+There are two types of objects. The first behaves like a class in other languages, and is declared like a function:
+```
+object Person(name, age) {
+    fn older() {
+        age + 1
+    }
+}
+```
+Here we define a `Person` object. We can instantiate it with `new`:
+```
+person = new Person("John Doe", 69)
+```
+We can then access `person.name` and `person.age`, and also call `person.older()`.
+
+The other type of object is declared without parameters:
+```
+object X {
+    y = 5
+    fn z() 6
+}
+```
+Here we define a namespace-like object `X`. We cannot instantiate it, only access its properties: `X:y` and `X:z`.
+    </div>
     </div>
     </main>
+    <script src="/docs/md.js"></script>
 </body>
 </html>

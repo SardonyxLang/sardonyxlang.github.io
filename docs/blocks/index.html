@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Documentation - The Sardonyx Programming Language</title>
-
     <meta charset="utf-8">
     <meta viewport="width=device-width">
     <meta name="description" content="The Official Documentation for The Sardonyx Programming Language">
     <meta name="keywords" content="Sardonyx, Language, Programming, Documentation, Docs">
-    <meta name="og:image" content="../src/images/sdx-logo.png">
-    <link href="/md.css" rel="stylesheet" type="text/css">
+    <meta name="og:image" content="/src/images/sdx-logo.png">
     <link href="/style.css" rel="stylesheet" type="text/css">
 
     <link rel="icon"
           type="image/ico"
-          href="../src/images/sdx-favicon.ico">
+          href="/src/images/sdx-favicon.ico">
+    <title>Blocks - The Sardonyx Programming Language</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+    <link href="/md.css" rel="stylesheet" type="text/css">
+    <link href="/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div id="sticky-navbar-wrapper">
@@ -29,12 +30,12 @@
     </div>
     </div>
     <main>
-    <nav>
+        <nav>
         <a href="/docs/blocks">Blocks</a>
         <a href="/docs/comments">Comments</a>
         <a href="/docs/flow">Control Flow</a>
         <a href="/docs/types">Data Types</a>
-        <a href="/docs/function">Functions</a>
+        <a href="/docs/functions">Functions</a>
         <a href="/docs/ruby">Interfacing with Ruby</a>
         <a href="/docs/objects">Objects</a>
         <a href="/docs/operators">Operators</a>
@@ -42,11 +43,24 @@
         <a href="/docs/variables">Variables</a>
     </nav>
     <div>
-    <h1>Docs</h1>
-    <p>
-        This page contains documentation for the Sardonyx programming language. It is copied from the <a href="https://github.com/SardonyxLang/Sardonyx/wiki">Github Wiki</a>.
-    </p>
+    <h1><a href="/docs">Docs</a> > Blocks</h1>
+    <div id="md">
+All blocks are literals. For example, the following code is valid:
+```
+a = { 5 + 5 }
+```
+Blocks function like anonymous functions, and can be called. They must be passed one argument, which will be bound to `_` in the body. For example, in the following code:
+```
+inc = { _ + 1 }
+```
+`inc(1)` would be `2`, `inc(3)` `4`, etc. Blocks are first class, like all values, and can be passed around. Like functions, they cannot modify scope, and evaluate to the last expression in them.
+
+## Technical Details
+
+- Like functions, blocks run in their own VM.
+    </div>
     </div>
     </main>
+    <script src="/docs/md.js"></script>
 </body>
 </html>

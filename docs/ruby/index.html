@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Documentation - The Sardonyx Programming Language</title>
-
     <meta charset="utf-8">
     <meta viewport="width=device-width">
     <meta name="description" content="The Official Documentation for The Sardonyx Programming Language">
     <meta name="keywords" content="Sardonyx, Language, Programming, Documentation, Docs">
-    <meta name="og:image" content="../src/images/sdx-logo.png">
-    <link href="/md.css" rel="stylesheet" type="text/css">
+    <meta name="og:image" content="/src/images/sdx-logo.png">
     <link href="/style.css" rel="stylesheet" type="text/css">
 
     <link rel="icon"
           type="image/ico"
-          href="../src/images/sdx-favicon.ico">
+          href="/src/images/sdx-favicon.ico">
+    <title>Interfacing with Ruby - The Sardonyx Programming Language</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+    <link href="/md.css" rel="stylesheet" type="text/css">
+    <link href="/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div id="sticky-navbar-wrapper">
@@ -29,12 +30,12 @@
     </div>
     </div>
     <main>
-    <nav>
+        <nav>
         <a href="/docs/blocks">Blocks</a>
         <a href="/docs/comments">Comments</a>
         <a href="/docs/flow">Control Flow</a>
         <a href="/docs/types">Data Types</a>
-        <a href="/docs/function">Functions</a>
+        <a href="/docs/functions">Functions</a>
         <a href="/docs/ruby">Interfacing with Ruby</a>
         <a href="/docs/objects">Objects</a>
         <a href="/docs/operators">Operators</a>
@@ -42,11 +43,18 @@
         <a href="/docs/variables">Variables</a>
     </nav>
     <div>
-    <h1>Docs</h1>
-    <p>
-        This page contains documentation for the Sardonyx programming language. It is copied from the <a href="https://github.com/SardonyxLang/Sardonyx/wiki">Github Wiki</a>.
-    </p>
+    <h1><a href="/docs">Docs</a> > Interfacing with Ruby</h1>
+    <div id="md">
+Interfacing with Ruby can be done through the `__rb_call` function. The first argument, a string, is the function to call, the second the arguments. For example:
+```
+__rb_call("puts", ["Hello, world!"])
+```
+The argument list can be empty.
+
+**NOTE: `__rb_call` internally uses `eval` and as such is very unsafe. Never allow untrusted user input into it; overall use it as little as possible. Sardonyx does its best to escape arguments, but it should still be avoided.**
+    </div>
     </div>
     </main>
+    <script src="/docs/md.js"></script>
 </body>
 </html>
