@@ -9,3 +9,11 @@ const links = {
         }
     }
 };
+
+for (const link in links) {
+    if (links
+.hasOwnProperty(link)) {
+        const element = links[link];
+        
+    }
+}
