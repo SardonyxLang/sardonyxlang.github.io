@@ -1,0 +1,10 @@
+#topic-sidebar {
+    height: 100vh;
+}
+
+#topic-sidebar nav {
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: auto;
+}
