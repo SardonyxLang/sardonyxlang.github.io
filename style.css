@@ -103,7 +103,7 @@ body {
     font-family: Oswald, sans-serif;
     font-size: 5em;
 
-    text-shadow: 0px 2px 3px #252525;
+    text-shadow: 0px 2px 3px #25252580;
     letter-spacing: 0.15em;
 
     color: #ce5a0d;
@@ -154,14 +154,18 @@ body {
 }
 
 #anchors-box .anchor {
-    height: 93vh;
+    height: 100vh;
     padding-top: 7vh;
     margin-top: -7vh;
-    display: flex;
+    /* display: flex; */
 }
 
 #anchors-box div.anchor:nth-child(odd) {
     background-color: #d3d3d3;
+}
+
+#install {
+    display: flex;
 }
 
 #install-instructions {
@@ -172,38 +176,74 @@ body {
 }
 
 #install-instructions h1 {
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
+    text-align: center;
+    text-align: center;
+    font-family: 'Hind Madurai', sans-serif;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    font-size: 40px;
+}
+
+#install-instructions ol {
+
+    list-style: none;
+    counter-reset: numbers;
 }
 
 #install-instructions li {
-    margin: 1.5em;
+    counter-increment: numbers;
+    margin-bottom: 20px;
+}
+
+#install-instructions li::before {
+    content: counter(numbers);
+    background-color: #ce5a0d;
+    border-radius: 50%;
+    color: white;
+    width: 2em;
+    height: 2em;
+    display: inline-grid;
+    place-items: center;
+    line-height: 2em;
+    margin-right: 15px;
 }
 
 #about .about-cards {
     width: 100%;
 
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center;
     align-items: center;
-    flex-direction: column;
-    overflow-y: auto;
+    flex-direction: column; */
+    /* overflow-y: auto; */
+    overflow: auto;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 4%;
+    padding: 15px;
 }
 
 #about .about-cards .about-card {
-    padding: 0.1vw 1vw 0.1vw 1vw;
+    padding: 1vw;
     margin: 0.5em;
 
-    width: 70vw;
+    /* width: 70vw; */
 
     background-color: #e2e2e2;
 
     border-radius: 10px;
 
-    box-shadow: 0px 4px 10px #252525;
+    box-shadow: 0px 4px 15px #2525257a;
     
     font-family: 'Hind Madurai', sans-serif;
+    transition: all .2s ease;
 }
+
+#about .about-cards .about-card:hover {
+    box-shadow: 0 10px 15px #25252580;
+}
+
 
 #about .about-cards .about-card h1 {
     color: #383838;
@@ -251,6 +291,21 @@ main > nav > a:hover {
     text-decoration: none;
 }
 
+.header {
+    text-align: center;
+    font-family: 'Hind Madurai', sans-serif;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    font-size: 40px;
+}
+
+@media (max-width: 945px) {
+    #about .about-cards {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 4%;
+    }
+}
+
 @media (max-width: 700px) {
     main {
         flex-direction: column;
@@ -268,5 +323,14 @@ main > nav > a:hover {
 
     main > div {
         padding: 0 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    #about .about-cards {
+        display: block;
+    }
+    #anchors-box .anchor {
+        height: 110vh;
     }
 }
