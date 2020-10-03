@@ -30,69 +30,92 @@
         <a class="link" href="https://github.com/SardonyxLang">Github</a>
     </div>
     </div>
-    <main>
-        <nav>
-        <a href="/docs/blocks">Blocks</a>
-        <a href="/docs/comments">Comments</a>
-        <a href="/docs/flow">Control Flow</a>
-        <a href="/docs/types">Data Types</a>
-        <a href="/docs/functions">Functions</a>
-        <a href="/docs/ruby">Interfacing with Ruby</a>
-        <a href="/docs/objects">Objects</a>
-        <a href="/docs/operators">Operators</a>
-        <a href="/docs/require">Requring Files</a>
-        <a href="/docs/variables">Variables</a>
-    </nav>
-    <div>
-    <h1><a href="/docs">Docs</a> > Control Flow</h1>
-    <div id="md">
-For loops use for-in format:
-```
-for x in y {
-    ...
-}
-```
-Here, in `...`, `x` would be bound to the next item in `y`. You can also omit the name, and it will be bound to `_`:
-```
-for y {
-    ...
-}
-```
-Here we could access `_` in `...`.
-While loops function as normal:
-```
-while e {
-    ...
-}
-```
-Here `...` will be run until `e` is false.
-We don't have to pass a block to any of these constructs:
-```
-while e ...
-```
-This will work whenever `...` is a single expression.
-`if` also functions as normal:
-```
-if a {
-   ...
-} else {
-   ...
-}
-```
-Once again, both `...`s can be changed to single expressions instead of blocks. Note that the `else` is optional.
-All control flow constructs are expressions. `while` and `for` evaluate to the last expression evaluated in their bodies; `if` evaluates to whatever condition was true. For example, `if true 5 else 6` evaluates to `5`, but `if false 5 else 6` evaluates to `6`. Thus, `if` can be used as a ternary. Because `if` is an expression, we can use `else if` for multiple conditions:
-```
-if a {
-    ...
-} else if b {
-    ...
-} else {
-    ...
-}
-```
+    <div class="main">
+        <div id="nav">
+            <h1>Sardonyx Docs</h1>
+            <hr>
+            <div class="link">
+                <a href="/docs/blocks">Blocks</a>
+            </div>
+            <div class="link">
+                <a href="/docs/comments">Comments</a>
+            </div>            
+            <div class="link">
+                <a href="/docs/flow">Control Flow</a>
+            </div>            
+            <div class="link">
+                <a href="/docs/types">Data Types</a>
+            </div>            
+            <div class="link">
+                <a href="/docs/functions">Functions</a> 
+            </div>            
+            <div class="link">
+                <a href="/docs/ruby">Interfacing with Ruby</a>
+            </div>            
+            <div class="link">
+                <a href="/docs/objects">Objects</a>                  
+            </div>
+            <div class="link">
+                <a href="/docs/operators">Operators</a>
+            </div>
+            <div class="link">
+                <a href="/docs/require">Requring Files</a>                
+            </div>
+            <div class="link">
+                <a href="/docs/variables">Variables</a>                
+            </div>
+        </div>
+        <div>
+            <h1><a href="/docs">Docs</a> > Control Flow</h1>
+            <div id="md">
+        For loops use for-in format:
+        ```
+        for x in y {
+            ...
+        }
+        ```
+        Here, in `...`, `x` would be bound to the next item in `y`. You can also omit the name, and it will be bound to `_`:
+        ```
+        for y {
+            ...
+        }
+        ```
+        Here we could access `_` in `...`.
+        While loops function as normal:
+        ```
+        while e {
+            ...
+        }
+        ```
+        Here `...` will be run until `e` is false.
+        We don't have to pass a block to any of these constructs:
+        ```
+        while e ...
+        ```
+        This will work whenever `...` is a single expression.
+        `if` also functions as normal:
+        ```
+        if a {
+           ...
+        } else {
+           ...
+        }
+        ```
+        Once again, both `...`s can be changed to single expressions instead of blocks. Note that the `else` is optional.
+        All control flow constructs are expressions. `while` and `for` evaluate to the last expression evaluated in their bodies; `if` evaluates to whatever condition was true. For example, `if true 5 else 6` evaluates to `5`, but `if false 5 else 6` evaluates to `6`. Thus, `if` can be used as a ternary. Because `if` is an expression, we can use `else if` for multiple conditions:
+        ```
+        if a {
+            ...
+        } else if b {
+            ...
+        } else {
+            ...
+        }
+        ```
+            </div>
+            </div>
     </div>
-    </div>
-    </main>
+
     <script src="/docs/md.js"></script>
 </body>
 </html>

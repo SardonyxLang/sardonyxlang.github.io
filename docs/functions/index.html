@@ -31,43 +31,66 @@
         <a class="link" href="https://github.com/SardonyxLang">Github</a>
     </div>
     </div>
-    <main>
-        <nav>
-        <a href="/docs/blocks">Blocks</a>
-        <a href="/docs/comments">Comments</a>
-        <a href="/docs/flow">Control Flow</a>
-        <a href="/docs/types">Data Types</a>
-        <a href="/docs/functions">Functions</a>
-        <a href="/docs/ruby">Interfacing with Ruby</a>
-        <a href="/docs/objects">Objects</a>
-        <a href="/docs/operators">Operators</a>
-        <a href="/docs/require">Requring Files</a>
-        <a href="/docs/variables">Variables</a>
-    </nav>
-    <div>
-    <h1><a href="/docs">Docs</a> > Functions</h1>
-    <div id="md">
-Functions are declared using `fn`. For example:
-```
-fn f(a, b, c) {
-    ...
-}
-```
-You can then call it using `f(a, b, c)` where `a`, `b`, and `c` are expressions. Whenever `f` is called, `...` will be run; the last value in it will be returned. Explicit return can be done with `return`:
-```
-fn f() {
-    return ...
-}
-```
-Functions cannot modify outside scope, but they can
-modify their arguments. Functions can be used as closures, since each keeps the scope they were defined in.
-
-## Technical Details
-
-- Every function runs in its own VM, but inherits scope from its caller.
+    <div class="main">
+        <div id="nav">
+            <h1>Sardonyx Docs</h1>
+            <hr>
+            <div class="link">
+                <a href="/docs/blocks">Blocks</a>
+            </div>
+            <div class="link">
+                <a href="/docs/comments">Comments</a>
+            </div>            
+            <div class="link">
+                <a href="/docs/flow">Control Flow</a>
+            </div>            
+            <div class="link">
+                <a href="/docs/types">Data Types</a>
+            </div>            
+            <div class="link">
+                <a href="/docs/functions">Functions</a> 
+            </div>            
+            <div class="link">
+                <a href="/docs/ruby">Interfacing with Ruby</a>
+            </div>            
+            <div class="link">
+                <a href="/docs/objects">Objects</a>                  
+            </div>
+            <div class="link">
+                <a href="/docs/operators">Operators</a>
+            </div>
+            <div class="link">
+                <a href="/docs/require">Requring Files</a>                
+            </div>
+            <div class="link">
+                <a href="/docs/variables">Variables</a>                
+            </div>
+        </div>
+        <div>
+            <h1><a href="/docs">Docs</a> > Functions</h1>
+            <div id="md">
+        Functions are declared using `fn`. For example:
+        ```
+        fn f(a, b, c) {
+            ...
+        }
+        ```
+        You can then call it using `f(a, b, c)` where `a`, `b`, and `c` are expressions. Whenever `f` is called, `...` will be run; the last value in it will be returned. Explicit return can be done with `return`:
+        ```
+        fn f() {
+            return ...
+        }
+        ```
+        Functions cannot modify outside scope, but they can
+        modify their arguments. Functions can be used as closures, since each keeps the scope they were defined in.
+        
+        ## Technical Details
+        
+        - Every function runs in its own VM, but inherits scope from its caller.
+            </div>
+            </div>
     </div>
-    </div>
-    </main>
+
     <script src="/docs/md.js"></script>
 </body>
 </html>

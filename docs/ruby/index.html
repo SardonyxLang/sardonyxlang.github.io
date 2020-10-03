@@ -30,32 +30,55 @@
         <a class="link" href="https://github.com/SardonyxLang">Github</a>
     </div>
     </div>
-    <main>
-        <nav>
-        <a href="/docs/blocks">Blocks</a>
-        <a href="/docs/comments">Comments</a>
-        <a href="/docs/flow">Control Flow</a>
-        <a href="/docs/types">Data Types</a>
-        <a href="/docs/functions">Functions</a>
-        <a href="/docs/ruby">Interfacing with Ruby</a>
-        <a href="/docs/objects">Objects</a>
-        <a href="/docs/operators">Operators</a>
-        <a href="/docs/require">Requring Files</a>
-        <a href="/docs/variables">Variables</a>
-    </nav>
-    <div>
-    <h1><a href="/docs">Docs</a> > Interfacing with Ruby</h1>
-    <div id="md">
-Interfacing with Ruby can be done through the `__rb_call` function. The first argument, a string, is the function to call, the second the arguments. For example:
-```
-__rb_call("puts", ["Hello, world!"])
-```
-The argument list can be empty.
-
-**NOTE: `__rb_call` internally uses `eval` and as such is very unsafe. Never allow untrusted user input into it; overall use it as little as possible. Sardonyx does its best to escape arguments, but it should still be avoided.**
+    <div class="main">
+        <div id="nav">
+            <h1>Sardonyx Docs</h1>
+            <hr>
+            <div class="link">
+                <a href="/docs/blocks">Blocks</a>
+            </div>
+            <div class="link">
+                <a href="/docs/comments">Comments</a>
+            </div>            
+            <div class="link">
+                <a href="/docs/flow">Control Flow</a>
+            </div>            
+            <div class="link">
+                <a href="/docs/types">Data Types</a>
+            </div>            
+            <div class="link">
+                <a href="/docs/functions">Functions</a> 
+            </div>            
+            <div class="link">
+                <a href="/docs/ruby">Interfacing with Ruby</a>
+            </div>            
+            <div class="link">
+                <a href="/docs/objects">Objects</a>                  
+            </div>
+            <div class="link">
+                <a href="/docs/operators">Operators</a>
+            </div>
+            <div class="link">
+                <a href="/docs/require">Requring Files</a>                
+            </div>
+            <div class="link">
+                <a href="/docs/variables">Variables</a>                
+            </div>
+        </div>
+        <div>
+            <h1><a href="/docs">Docs</a> > Interfacing with Ruby</h1>
+            <div id="md">
+        Interfacing with Ruby can be done through the `__rb_call` function. The first argument, a string, is the function to call, the second the arguments. For example:
+        ```
+        __rb_call("puts", ["Hello, world!"])
+        ```
+        The argument list can be empty.
+        
+        **NOTE: `__rb_call` internally uses `eval` and as such is very unsafe. Never allow untrusted user input into it; overall use it as little as possible. Sardonyx does its best to escape arguments, but it should still be avoided.**
+            </div>
+            </div>
     </div>
-    </div>
-    </main>
+ 
     <script src="/docs/md.js"></script>
 </body>
 </html>
