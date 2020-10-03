@@ -30,48 +30,70 @@
         <a class="link" href="https://github.com/SardonyxLang">Github</a>
     </div>
     </div>
-    <main>
-        <nav>
-        <a href="/docs/blocks">Blocks</a>
-        <a href="/docs/comments">Comments</a>
-        <a href="/docs/flow">Control Flow</a>
-        <a href="/docs/types">Data Types</a>
-        <a href="/docs/functions">Functions</a>
-        <a href="/docs/ruby">Interfacing with Ruby</a>
-        <a href="/docs/objects">Objects</a>
-        <a href="/docs/operators">Operators</a>
-        <a href="/docs/require">Requring Files</a>
-        <a href="/docs/variables">Variables</a>
-    </nav>
-    <div>
-    <h1><a href="/docs">Docs</a> > Objects</h1>
-    <div id="md">
-Objects are the Sardonyx version of modules and namespaces. They are declared using the `object` keyword.
-There are two types of objects. The first behaves like a class in other languages, and is declared like a function:
-```
-object Person(name, age) {
-    fn older() {
-        age + 1
-    }
-}
-```
-Here we define a `Person` object. We can instantiate it with `new`:
-```
-person = new Person("John Doe", 69)
-```
-We can then access `person.name` and `person.age`, and also call `person.older()`.
-
-The other type of object is declared without parameters:
-```
-object X {
-    y = 5
-    fn z() 6
-}
-```
-Here we define a namespace-like object `X`. We cannot instantiate it, only access its properties: `X:y` and `X:z`.
+    <div class="main">
+        <div id="nav">
+            <h1>Sardonyx Docs</h1>
+            <hr>
+            <div class="link">
+                <a href="/docs/blocks">Blocks</a>
+            </div>
+            <div class="link">
+                <a href="/docs/comments">Comments</a>
+            </div>            
+            <div class="link">
+                <a href="/docs/flow">Control Flow</a>
+            </div>            
+            <div class="link">
+                <a href="/docs/types">Data Types</a>
+            </div>            
+            <div class="link">
+                <a href="/docs/functions">Functions</a> 
+            </div>            
+            <div class="link">
+                <a href="/docs/ruby">Interfacing with Ruby</a>
+            </div>            
+            <div class="link">
+                <a href="/docs/objects">Objects</a>                  
+            </div>
+            <div class="link">
+                <a href="/docs/operators">Operators</a>
+            </div>
+            <div class="link">
+                <a href="/docs/require">Requring Files</a>                
+            </div>
+            <div class="link">
+                <a href="/docs/variables">Variables</a>                
+            </div>
+        </div>
+        <div>
+            <h1><a href="/docs">Docs</a> > Objects</h1>
+            <div id="md">
+        Objects are the Sardonyx version of modules and namespaces. They are declared using the `object` keyword.
+        There are two types of objects. The first behaves like a class in other languages, and is declared like a function:
+        ```
+        object Person(name, age) {
+            fn older() {
+                age + 1
+            }
+        }
+        ```
+        Here we define a `Person` object. We can instantiate it with `new`:
+        ```
+        person = new Person("John Doe", 69)
+        ```
+        We can then access `person.name` and `person.age`, and also call `person.older()`.
+        
+        The other type of object is declared without parameters:
+        ```
+        object X {
+            y = 5
+            fn z() 6
+        }
+        ```
+        Here we define a namespace-like object `X`. We cannot instantiate it, only access its properties: `X:y` and `X:z`.
+            </div>
+            </div>
     </div>
-    </div>
-    </main>
     <script src="/docs/md.js"></script>
 </body>
 </html>

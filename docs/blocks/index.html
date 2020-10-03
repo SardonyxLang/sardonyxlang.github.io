@@ -30,38 +30,61 @@
         <a class="link" href="https://github.com/SardonyxLang">Github</a>
     </div>
     </div>
-    <main>
-        <nav>
-        <a href="/docs/blocks">Blocks</a>
-        <a href="/docs/comments">Comments</a>
-        <a href="/docs/flow">Control Flow</a>
-        <a href="/docs/types">Data Types</a>
-        <a href="/docs/functions">Functions</a>
-        <a href="/docs/ruby">Interfacing with Ruby</a>
-        <a href="/docs/objects">Objects</a>
-        <a href="/docs/operators">Operators</a>
-        <a href="/docs/require">Requring Files</a>
-        <a href="/docs/variables">Variables</a>
-    </nav>
-    <div>
-    <h1><a href="/docs">Docs</a> > Blocks</h1>
-    <div id="md">
-All blocks are literals. For example, the following code is valid:
-```
-a = { 5 + 5 }
-```
-Blocks function like anonymous functions, and can be called. They must be passed one argument, which will be bound to `_` in the body. For example, in the following code:
-```
-inc = { _ + 1 }
-```
-`inc(1)` would be `2`, `inc(3)` `4`, etc. Blocks are first class, like all values, and can be passed around. Like functions, they cannot modify scope, and evaluate to the last expression in them.
-
-## Technical Details
-
-- Like functions, blocks run in their own VM.
+    <div class="main">
+        <div id="nav">
+            <h1>Sardonyx Docs</h1>
+            <hr>
+            <div class="link">
+                <a href="/docs/blocks">Blocks</a>
+            </div>
+            <div class="link">
+                <a href="/docs/comments">Comments</a>
+            </div>            
+            <div class="link">
+                <a href="/docs/flow">Control Flow</a>
+            </div>            
+            <div class="link">
+                <a href="/docs/types">Data Types</a>
+            </div>            
+            <div class="link">
+                <a href="/docs/functions">Functions</a> 
+            </div>            
+            <div class="link">
+                <a href="/docs/ruby">Interfacing with Ruby</a>
+            </div>            
+            <div class="link">
+                <a href="/docs/objects">Objects</a>                  
+            </div>
+            <div class="link">
+                <a href="/docs/operators">Operators</a>
+            </div>
+            <div class="link">
+                <a href="/docs/require">Requring Files</a>                
+            </div>
+            <div class="link">
+                <a href="/docs/variables">Variables</a>                
+            </div>
+        </div>
+        <div>
+            <h1><a href="/docs">Docs</a> > Blocks</h1>
+            <div id="md">
+            All blocks are literals. For example, the following code is valid:
+            ```
+            a = { 5 + 5 }
+            ```
+            Blocks function like anonymous functions, and can be called. They must be passed one argument, which will be bound to `_` in the body. For example, in the following code:
+            ```
+            inc = { _ + 1 }
+            ```
+            `inc(1)` would be `2`, `inc(3)` `4`, etc. Blocks are first class, like all values, and can be passed around. Like functions, they cannot modify scope, and evaluate to the last expression in them.
+            
+            ## Technical Details
+            
+            - Like functions, blocks run in their own VM.
+            </div>
+        </div>
     </div>
-    </div>
-    </main>
+
     <script src="/docs/md.js"></script>
 </body>
 </html>
