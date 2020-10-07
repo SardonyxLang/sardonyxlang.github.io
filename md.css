@@ -3,7 +3,7 @@ h1 {
 }
 
 h1 > a {
-    color: black;
+    color: rgb(43, 33, 22);
 }
 
 #md {
@@ -14,11 +14,15 @@ h1 > a {
 }
 
 a {
-    color: blue;
+    color: rgb(0, 131, 253);
 }
 
 a:hover {
     text-decoration: none;
+}
+
+a:active {
+    color: rgb(0, 97, 189);
 }
 
 p, pre, h1, h2, h3, h4, h5, h6, ul {
@@ -27,16 +31,17 @@ p, pre, h1, h2, h3, h4, h5, h6, ul {
 }
 
 pre, code {
-    background: black;
+    /* background: rgb(65, 65, 65); */
     color: white;
     display: block;
     font-family: monospace;
-    padding: 5px;
-    border-radius: 5px 5px;
+    padding: 10px 5px;
+    border-radius: 5px;
 }
 
 code {
     display: inline;
+    padding: 10px 0;
 }
 
 .main {
@@ -50,14 +55,15 @@ code {
     padding: 10px;
 }
 
-.link {
-}
-
 .link a {
-    color: black;
+    color: rgb(70, 66, 66);
     text-decoration: none;
     font-size: 20px;
     font-family: 'Hind Madurai', sans-serif;
+}
+
+.link a:hover {
+    text-decoration: underline;
 }
 
 hr {
