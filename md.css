@@ -30,11 +30,12 @@ p, pre, h1, h2, h3, h4, h5, h6, ul {
     font-family: 'Hind Madurai', sans-serif;
 }
 
-pre, code {
-    /* background: rgb(65, 65, 65); */
+pre code {
+    background: rgb(65, 65, 65);
+    width: calc(100% - 24px);
     color: white;
     display: block;
-    font-family: monospace;
+    font-family: 'Nanum Gothic Coding', monospace;
     padding: 10px 5px;
     border-radius: 5px;
 }
@@ -42,6 +43,7 @@ pre, code {
 code {
     display: inline;
     padding: 10px 0;
+    font-family: 'Nanum Gothic Coding', monospace;
 }
 
 .main {
@@ -55,6 +57,7 @@ code {
     padding: 10px;
     margin-right: 16px;
     background: #d5c8bb;
+    overflow: auto;
 }
 
 .link a {

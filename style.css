@@ -141,6 +141,17 @@ body {
 }
 
 
+pre code {
+    background: rgb(65, 65, 65);
+    width: calc(100% - 24px);
+    color: white;
+    display: block;
+    font-family: 'Nanum Gothic Coding', monospace;
+    padding: 10px 5px;
+    border-radius: 5px;
+    margin-left: 8px;
+}
+
 code {
     background-color: #494949;
     color: white;
@@ -300,6 +311,11 @@ main > nav > a:hover {
     letter-spacing: 2px;
     font-weight: lighter;
     font-size: 40px;
+}
+
+#taste-of-sdx {
+    font-family: 'Hind Madurai', sans-serif;
+    text-align: center;
 }
 
 @media (max-width: 945px) {
