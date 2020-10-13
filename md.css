@@ -51,8 +51,10 @@ code {
 
 #nav {
     min-width: 200px;
-    /* background-color: red; */
+    height: calc(100vh - 71.8px);
     padding: 10px;
+    margin-right: 16px;
+    background: #d5c8bb;
 }
 
 .link a {
@@ -60,12 +62,17 @@ code {
     text-decoration: none;
     font-size: 20px;
     font-family: 'Hind Madurai', sans-serif;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    display: block;
+    margin: 8px 0;
 }
 
 .link a:hover {
-    text-decoration: underline;
+    background: rgba(255, 255, 255, 0.2);
 }
 
 hr {
-    border: 1px solid #ce5a0d;
+    border: none;
+    border-top: 2px solid #ce5a0d;
 }

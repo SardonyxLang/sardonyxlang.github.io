@@ -31,7 +31,7 @@ body {
 
     padding: 2px;
     
-    background-color: #1b1b1b;
+    background-color: #ff5f26;
 
     width: 100%;
 
@@ -79,8 +79,8 @@ body {
 }
 
 #top-navbar .link:hover {
-    background-color: #ce5a0d;
-    /* color: #1b1b1b; */
+    background-color: white;
+    color: #272727;
 }
 
 #intro-box {
@@ -144,7 +144,7 @@ body {
 code {
     background-color: #494949;
     color: white;
-    padding: 0.2rem;
+    padding: 0.2rem 0.4rem;
     border-radius: 4px;
     font-family: 'Nanum Gothic Coding', monospace;
     letter-spacing: 0.05em;
@@ -176,7 +176,6 @@ code {
 }
 
 #install-instructions h1 {
-    text-align: center;
     text-align: center;
     font-family: 'Hind Madurai', sans-serif;
     letter-spacing: 2px;
