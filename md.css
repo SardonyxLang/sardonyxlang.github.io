@@ -3,7 +3,7 @@ h1 {
 }
 
 h1 > a {
-    color: black;
+    color: rgb(43, 33, 22);
 }
 
 #md {
@@ -14,11 +14,15 @@ h1 > a {
 }
 
 a {
-    color: blue;
+    color: rgb(0, 131, 253);
 }
 
 a:hover {
     text-decoration: none;
+}
+
+a:active {
+    color: rgb(0, 97, 189);
 }
 
 p, pre, h1, h2, h3, h4, h5, h6, ul {
@@ -26,17 +30,20 @@ p, pre, h1, h2, h3, h4, h5, h6, ul {
     font-family: 'Hind Madurai', sans-serif;
 }
 
-pre, code {
-    background: black;
+pre code {
+    background: rgb(65, 65, 65);
+    width: calc(100% - 24px);
     color: white;
     display: block;
-    font-family: monospace;
-    padding: 5px;
-    border-radius: 5px 5px;
+    font-family: 'Nanum Gothic Coding', monospace;
+    padding: 10px 5px;
+    border-radius: 5px;
 }
 
 code {
     display: inline;
+    padding: 10px 0;
+    font-family: 'Nanum Gothic Coding', monospace;
 }
 
 .main {
@@ -46,20 +53,43 @@ code {
 
 #nav {
     min-width: 200px;
-    /* background-color: red; */
+    height: calc(100vh - 19px - 2.9em);
     padding: 10px;
+    margin-right: 16px;
+    background: #d5c8bb;
+    overflow: auto;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
-.link {
+#nav + div {
+    overflow: auto;
+    height: calc(100vh - 60px);
 }
 
 .link a {
-    color: black;
+    color: rgb(70, 66, 66);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.2em;
     font-family: 'Hind Madurai', sans-serif;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    display: block;
+    margin: 8px 0;
+    border-radius: 4px;
+}
+
+.link a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5)
 }
 
 hr {
-    border: 1px solid #ce5a0d;
+    border: none;
+    border-top: 2px solid #ce5a0d;
+}
+
+@media screen and (max-width: 500px) {
+    #nav {
+        min-width: 10em;
+    }
 }

@@ -27,15 +27,15 @@ body {
     justify-content: flex-end;
     align-items: center;
 
-    height: 7vh;
+    height: 3rem;
 
     padding: 2px;
     
-    background-color: #1b1b1b;
+    background-color: #ff5f26;
 
     width: 100%;
 
-    box-shadow: 0px 2px 7px #252525;
+    box-shadow: 0px 0px 4px #0c0c0cb5;
 }
 
 #top-navbar #home-link {
@@ -49,18 +49,18 @@ body {
 
 #top-navbar span {
     color: white;
-    font-size: 1.7em;
+    font-size: 1.7rem;
 }
 
 #top-navbar #home-link img {
-    width: 3em;
-    height: 3em;
+    width: 4rem;
+    height: 4rem;
     padding-right: 1.5%;
 }
 
 #top-navbar .link {
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 1.2rem;
 
     color: white;
     background-color: #272727;
@@ -79,8 +79,8 @@ body {
 }
 
 #top-navbar .link:hover {
-    background-color: #ce5a0d;
-    /* color: #1b1b1b; */
+    background-color: white;
+    color: #272727;
 }
 
 #intro-box {
@@ -141,15 +141,26 @@ body {
 }
 
 
-code {
-    background-color: #000000;
+pre code {
+    background: rgb(65, 65, 65);
+    width: calc(100% - 24px);
     color: white;
-    padding: 0.1em;
+    display: block;
+    font-family: 'Nanum Gothic Coding', monospace;
+    padding: 10px 5px;
     border-radius: 5px;
+    margin-left: 8px;
+}
+
+code {
+    background-color: #494949;
+    color: white;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
     font-family: 'Nanum Gothic Coding', monospace;
     letter-spacing: 0.05em;
     white-space: pre-wrap;
-    /* box-shadow: 0px 2px 7px #252525; */
+    box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.5);
     display: inline-block;
 }
 
@@ -176,7 +187,6 @@ code {
 }
 
 #install-instructions h1 {
-    text-align: center;
     text-align: center;
     font-family: 'Hind Madurai', sans-serif;
     letter-spacing: 2px;
@@ -276,11 +286,15 @@ main > nav {
 }
 
 a {
-    color: blue;
+    color: rgb(0, 131, 253);
 }
 
 a:hover {
     text-decoration: none;
+}
+
+a:active {
+    color: rgb(0, 97, 189);
 }
 
 main > nav > a {
@@ -297,6 +311,11 @@ main > nav > a:hover {
     letter-spacing: 2px;
     font-weight: lighter;
     font-size: 40px;
+}
+
+#taste-of-sdx {
+    font-family: 'Hind Madurai', sans-serif;
+    text-align: center;
 }
 
 @media (max-width: 945px) {
